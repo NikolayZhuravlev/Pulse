@@ -35,3 +35,30 @@
         align-items:flex-end;
     }
 }
+@media (max-width: 776px) {
+    .header {
+        &__official {
+            display: none;
+        }
+        &__phone {
+            font-size: 15px;
+        }
+        &__logo {
+            width: 230px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .header {
+        flex-direction: column;
+        &__logo {
+            width: 200px;
+        }
+        &__contacts {
+            margin-top: 15px;
+        }
+        &__phone {
+            margin-bottom: 5px;
+        }
+    }
+}

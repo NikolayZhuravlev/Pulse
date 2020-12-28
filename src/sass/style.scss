@@ -4,6 +4,9 @@
 @import "blocks/header";
 @import "blocks/buttons";
 @import "blocks/advantages";
+@import "blocks/title";
+@import "blocks/consultation";
+@import "blocks/forms";
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -15,5 +18,10 @@
     .container {
         max-width: 100%;
         padding: 0 50px;
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        padding: 0 20px;
     }
 }
