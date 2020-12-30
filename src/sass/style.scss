@@ -1,4 +1,7 @@
 @import "base/variables";
+* {
+    font-family: 'Museo Sans Cyrl', sans-serif;
+}
 @import "base/mixins";
 @import "blocks/promo";
 @import "blocks/header";
@@ -7,10 +10,10 @@
 @import "blocks/title";
 @import "blocks/consultation";
 @import "blocks/forms";
-* {
-    font-family: 'Museo Sans Cyrl', sans-serif;
-}
+@import "blocks/carousel";
+@import "blocks/catalog";
 .container {
+    position: relative;
     max-width: 950px;
     margin: 0 auto;
 }
