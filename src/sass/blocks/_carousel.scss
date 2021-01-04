@@ -25,3 +25,54 @@
         left: auto;
     }
 }
+@media (max-width: 1154px) {
+    .carousel {
+        &__inner {
+            width: 80%;
+        }
+        .prev {
+            left: -8px;
+        }
+        .next {
+            right: -8px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .carousel {
+        &__inner {
+            width: 60%;
+            img {
+                width: 80%;
+            }
+        }
+        .prev {
+            left: 20px;
+        }
+        .next {
+            right: 20px;
+        }
+    }
+}
+@media (max-width: 776px) {
+    .carousel {
+        padding: 70px 0;
+        .prev, .next {
+            img {
+                width: 60%;
+                height: 60%;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .carousel {
+        padding: 55px 0;
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+    }
+}
