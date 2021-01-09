@@ -71,4 +71,45 @@ $(document).ready(function(){
       $('.overlay, #order').fadeIn('slow');
     });
   });
+
+  //Validate
+
+  function validate(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: {
+          required: true,
+          minlength: 10,
+          maxlength: 10
+        },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите своё имя",
+          minlength: jQuery.validator.format("Введите не менее {0} символов!")
+        },
+        phone: {
+          required: "Пожалуйста, введите свой номер телефона",
+          minlength: jQuery.validator.format("Введите {0} символов!"),
+          maxlength: jQuery.validator.format("Введено более {0} символов!")
+        },
+        email: {
+          required: "Пожалуйста, введите свою почту",
+          email: "Введите почтовый адрес почты в формате name@mail.ru"
+        }
+      }
+    });
+  };
+
+  validate('#consultation-form');
+  validate('#consultation .feed-form');
+  validate('#order .feed-form');
 }); 

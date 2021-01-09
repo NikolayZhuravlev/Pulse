@@ -10,6 +10,14 @@
         line-height: normal;
         text-align: left;
     }
+    .error {
+        border: 1px solid $main-color;
+    }
+    label.error {
+        border: none;
+        margin-bottom: 15px;
+        color: $white-color; 
+    }
 }
 @media (max-width: 991px) {
     .consultation {
