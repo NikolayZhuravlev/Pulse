@@ -80,19 +80,11 @@
             font-size: 12px;
         }
         &__close {
-            top: 1;
-            right: -2px;
+            top: 11px;
+            right: 8px;
             font-size: 40px;
             line-height: 18px;
             z-index: 1;
-            &-border { 
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                border: 2px solid $main-color;
-                top: 0;
-                right: 0;
-            }
         }
     }
 }
