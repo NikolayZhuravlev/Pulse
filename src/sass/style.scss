@@ -1,4 +1,10 @@
+@import "libs/bootstrap-reboot.min";
+@import "libs/font";
+@import "libs/slick";
+@import "libs/animate";
+
 @import "base/variables";
+@import "base/animation";
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -15,6 +21,7 @@
 @import "blocks/reviews";
 @import "blocks/footer";
 @import "blocks/modal";
+@import "blocks/scrollUp";
 .container {
     position: relative;
     max-width: 950px;

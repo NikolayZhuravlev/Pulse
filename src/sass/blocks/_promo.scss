@@ -42,6 +42,13 @@
             margin-bottom: 20px;
         }
     }
+    &__icon {
+        &_animated {
+            img {
+                animation: delivering 3s linear infinite normal;
+            }
+        }
+    }
     &__link {
         margin-top: 18px;
         color: $white-color;

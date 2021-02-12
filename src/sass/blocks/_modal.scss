@@ -60,6 +60,9 @@
         width: 340px;
         min-height: 360px;
         padding: 35px;
+        &_mini {
+            min-height: 140px;
+        }
         &__title {
             font-size: 16px;
         }
@@ -73,6 +76,9 @@
         width: 294px;
         min-height: 310px;
         padding: 27px;
+        &_mini {
+            min-height: 140px;
+        }
         &__title {
             font-size: 14px;
         }

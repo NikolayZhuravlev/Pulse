@@ -37,6 +37,12 @@
         display: none;
         justify-content: space-between;
         flex-wrap: wrap;
+        &_two-elements {
+            justify-content: flex-start;
+            .catalog-item {
+                margin: 0 10px 20px 10px;
+            }
+        }
         &_active {
             display: flex;
         }
@@ -66,6 +72,7 @@
             font-size: 14px;
             font-weight: 300;
             text-align: center;
+            width: 250px;
         }
         &__link {
             display: block;
@@ -136,7 +143,7 @@
             padding-left: 19px;
             margin-bottom: 0;
             list-style-type: none;
-            li {
+            &_point {
                 position: relative;
                 color: #555555;
                 font-size: 14px;

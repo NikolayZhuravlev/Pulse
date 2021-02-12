@@ -1,0 +1,34 @@
+.scrollUp_flex {
+    display: flex;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $main-color;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 85%;
+    }
+}
+.scrollUp {
+    display: none;
+}
+@media (max-width: 991px) {
+    .scrollUp_flex {
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 575px) {
+    .scrollUp_flex {
+        right: 10px;
+        bottom: 10px;
+        width: 35px;
+        height: 35px;
+    }
+}
