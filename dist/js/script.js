@@ -79,6 +79,21 @@ $(document).ready(function(){
           required: "Пожалуйста, введите свою почту!",
           email: "Введите почтовый адрес почты в формате name@mail.ru"
         }
+      },
+      submitHandler: function(form, e) {
+        e.preventDefault();
+        console.log("Form submitted");
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).find("input").val("");
+          $('#consultation, #order').fadeOut().validate('#consultation-form');
+          $('.overlay, #thanks').fadeIn('slow');
+          $('form').trigger('reset');
+        });
+        return false;
       }
     });
   };
@@ -89,20 +104,42 @@ $(document).ready(function(){
 
   $("input[name=phone]").mask("+7 (999) 999-99-99");
 
-  $('form').submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "mailer/smart.php",
-      data: $(this).serialize()
-    }).done(function() {
-      $(this).find("input").val("");
-      $('#consultation, #order').fadeOut().validate('#consultation-form');
-      $('.overlay, #thanks').fadeIn('slow');
-      $('form').trigger('reset');
-    });
-    return false;
-  }); 
+  // $('form').submit(function(e) {
+  //   e.preventDefault();
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "mailer/smart.php",
+  //     data: $(this).serialize()
+  //   }).done(function() {
+  //     $(this).find("input").val("");
+  //     $('#consultation, #order').fadeOut().validate('#consultation-form');
+  //     $('.overlay, #thanks').fadeIn('slow');
+  //     $('form').trigger('reset');
+  //   });
+  //   return false;
+  // }); 
+
+//  $(sent). {
+//     if ($('form').valid()) {
+//       $('form').submit(function(e) {
+//         e.preventDefault();
+//         $.ajax({
+//           type: "POST",
+//           url: "mailer/smart.php",
+//           data: $(this).serialize()
+//         }).done(function() {
+//           $(this).find("input").val("");
+//           $('#consultation, #order').fadeOut().validate('#consultation-form');
+//           $('.overlay, #thanks').fadeIn('slow');
+//           $('form').trigger('reset');
+//         });
+//         return false;
+//       }); 
+//   } else {
+//     console.log('ERROR')
+//   };
+//  }
+
 
   // Smooth scroll and page up
 
