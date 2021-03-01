@@ -26,6 +26,13 @@
     .carousel {
         &__inner {
             width: 80%;
+            img {
+                width: 100%;
+            }
+        }
+        .slick-list {
+            width: 80%;
+            margin: 0 auto;
         }
         .slick-prev {
             left: -8px;
@@ -39,15 +46,20 @@
     .carousel {
         &__inner {
             width: 60%;
-            img {
-                width: 80%;
-            }
         }
         .slick-prev {
-            left: 20px;
+            left: -25px;
+            img {
+                width: 23px;
+                height: 38px;
+            }
         }
         .slick-next {
-            right: 20px;
+            right: -25px;
+            img {
+                width: 23px;
+                height: 38px;
+            }
         }
     }
 }
@@ -58,6 +70,18 @@
             img {
                 width: 60%;
                 height: 60%;
+            }
+        }
+        .slick-dots {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            button {
+                &::before {
+                    display: none;
+                }
             }
         }
     }
